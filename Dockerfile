@@ -3,9 +3,6 @@ FROM ubuntu
 # REPOS
 RUN apt-get update; apt-get install -y -q software-properties-common python-software-properties
 
-# SHIMS
-RUN dpkg-divert --local --rename --add /sbin/initctl; ln -s /bin/true /sbin/initctl
-
 # LANGUAGE
 RUN apt-get install -y -q language-pack-en
 ENV LANGUAGE en_US.UTF-8
