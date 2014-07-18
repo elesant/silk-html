@@ -1,4 +1,4 @@
-FROM base
+FROM ubuntu
 
 # REPOS
 RUN apt-get update; apt-get install -y -q software-properties-common python-software-properties
