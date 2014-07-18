@@ -12,6 +12,7 @@ RUN locale-gen en_US.UTF-8; dpkg-reconfigure locales
 
 # DEFAULT
 RUN apt-get install -y -q curl git mercurial subversion make wget openssh-server sudo zip tmux vim emacs nano build-essential g++ memcached imagemagick graphicsmagick graphicsmagick-libmagick-dev-compat python python-setuptools python-dev python-distribute python-pip python-virtualenv ruby ruby-dev openjdk-6-jdk sqlite3 libxml2-dev libxslt1-dev libpq-dev libsqlite3-dev libmysqlclient-dev
+RUN easy_install supervisor
 
 # NGINX
 RUN apt-get install -y -q nginx
