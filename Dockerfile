@@ -25,6 +25,7 @@ RUN mkdir /var/run/sshd
 RUN adduser --disabled-password --gecos "" kite; usermod -a -G sudo kite
 RUN echo "kite	ALL=NOPASSWD: ALL" >> /etc/sudoers
 ADD app /home/kite/workspace
+RUN mkdir /home/kite/.ssh
 
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
