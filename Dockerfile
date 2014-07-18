@@ -18,6 +18,9 @@ RUN apt-get install -y -q nginx
 ADD default /etc/nginx/sites-available/
 ADD app /home/kite/workspace
 
+# USER
+RUN adduser --disabled-password --gecos "" kite; usermod -a -G sudo kite
+
 EXPOSE 8000
 
 ADD start.sh /
