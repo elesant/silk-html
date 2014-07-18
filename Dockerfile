@@ -11,7 +11,7 @@ ENV LC_ALL en_US.UTF-8
 RUN locale-gen en_US.UTF-8; dpkg-reconfigure locales
 
 # DEFAULT
-RUN apt-get install -y -q curl git make wget openssh-server sudo zip tmux vim nano memcached python python-setuptools python-pip openjdk-6-jdk sqlite3
+RUN apt-get install -y -q curl git make wget openssh-server zip tmux vim nano memcached python python-setuptools python-pip openjdk-6-jdk sqlite3
 
 # RUNNING
 RUN easy_install supervisor
