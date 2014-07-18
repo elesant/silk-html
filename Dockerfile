@@ -23,5 +23,4 @@ RUN adduser --disabled-password --gecos "" kite; usermod -a -G sudo kite
 
 EXPOSE 8000
 
-ADD start.sh /
-CMD ["sh", "/start.sh"]
+CMD ["nginx"]
