@@ -17,7 +17,6 @@ RUN apt-get install -y -q curl git mercurial subversion make wget openssh-server
 RUN apt-get install -y -q nginx
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 ADD default /etc/nginx/sites-available/default
-ADD default /etc/nginx/sites-available/default
 ADD app /home/kite/workspace
 
 # USER
