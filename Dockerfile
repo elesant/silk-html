@@ -16,12 +16,17 @@ RUN apt-get install -y -q curl git mercurial subversion make wget openssh-server
 # NGINX
 RUN apt-get install -y -q nginx
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-ADD default /etc/nginx/sites-available/default
+ADD ./default /etc/nginx/sites-available/default
+ADD ./configs/supervisord.conf /etc/supervisord.conf
 ADD app /home/kite/workspace
+RUN mkdir /var/log/supervisor/
+RUN mkdir /var/run/sshd
+RUN echo %sudo	ALL=NOPASSWD: ALL >> /etc/sudoers
 
 # USER
 RUN adduser --disabled-password --gecos "" kite; usermod -a -G sudo kite
 
 EXPOSE 8000
+EXPOSE 22
 
 CMD ["nginx"]
