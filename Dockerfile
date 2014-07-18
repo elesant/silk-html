@@ -26,4 +26,4 @@ RUN echo %sudo	ALL=NOPASSWD: ALL >> /etc/sudoers
 EXPOSE 8000
 EXPOSE 22
 
-CMD ["sh", "start.sh"]
+CMD ["/bin/bash", "/start.sh"]
