@@ -23,10 +23,7 @@ RUN mkdir /var/log/supervisor/
 RUN mkdir /var/run/sshd
 RUN echo %sudo	ALL=NOPASSWD: ALL >> /etc/sudoers
 
-# USER
-RUN adduser --disabled-password --gecos "" kite; usermod -a -G sudo kite
-
 EXPOSE 8000
 EXPOSE 22
 
-CMD ["nginx"]
+CMD ["sh", "start.sh"]
