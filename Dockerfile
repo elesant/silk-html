@@ -16,7 +16,6 @@ RUN easy_install supervisor
 
 # NGINX
 RUN apt-get install -y -q nginx
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 ADD ./configs/default /etc/nginx/sites-available/default
 ADD ./configs/supervisord.conf /etc/supervisord.conf
 ADD app /home/kite/workspace
