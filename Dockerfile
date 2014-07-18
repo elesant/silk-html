@@ -21,7 +21,7 @@ ADD ./configs/supervisord.conf /etc/supervisord.conf
 ADD app /home/kite/workspace
 RUN mkdir /var/log/supervisor/
 RUN mkdir /var/run/sshd
-RUN echo %sudo	ALL=NOPASSWD: ALL >> /etc/sudoers
+RUN echo "kite	ALL=NOPASSWD: ALL" >> /etc/sudoers
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
