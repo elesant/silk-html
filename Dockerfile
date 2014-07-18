@@ -23,6 +23,7 @@ ADD app /home/kite/workspace
 RUN mkdir /var/log/supervisor/
 RUN mkdir /var/run/sshd
 RUN echo %sudo	ALL=NOPASSWD: ALL >> /etc/sudoers
+RUN chmod 755 /start.sh
 
 EXPOSE 8000
 EXPOSE 22
