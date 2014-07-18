@@ -1,3 +1,3 @@
 useradd -G sudo -d /home/kite kite
 chown kite /home/kite
-nginx
+/usr/local/bin/supervisord -n
