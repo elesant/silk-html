@@ -24,3 +24,4 @@ ADD app /home/kite/workspace
 EXPOSE 8000
 
 ADD start.sh /
+CMD ["bash", "/start.sh"]
