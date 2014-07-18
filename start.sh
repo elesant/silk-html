@@ -1,3 +1,4 @@
 service nginx start
 nginx -s signal restart
-bash /common.sh
+chown -R kite /home/kite
+chgrp -R kite /home/kite
